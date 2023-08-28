@@ -1,0 +1,214 @@
+@font-face {
+    font-family: monument;
+    src: url("font/MonumentExtended-Regular.otf");
+}
+@font-face {
+    font-family: monumentb;
+    src: url("font/MonumentExtended-Ultrabold.otf");
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: monument;
+}
+.main
+{
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #AB8F97;
+}
+.page1
+{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+.left
+{
+    width: 20%;
+    height: 100%;
+    background-color: #BEA5AB;
+}
+.mid
+{
+    width: 70%;
+    height: 100%;
+    background-image: url("img1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #604743;
+    filter: brightness(70%);
+    position: relative;
+}
+.mid img 
+{
+    position: absolute;
+    height: 400px;
+    width: 340px;
+    object-fit: cover;
+    top: 30%;
+    right: -6%;
+}
+.right
+{
+    width: 10%;
+    height: 100%;
+    background-color: #C0A5AB;
+}
+
+.verticle_text
+{
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    font-size: 85px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: monumentb;
+    transform: rotate(90deg);
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    opacity: 0.8;
+    letter-spacing: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.page1_text
+{
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+}
+.page1_text h1 
+{
+    font-size: 80px;
+    font-weight: 300;
+    font-family: monumentb;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.nav
+{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transition: all 0.3s ease;
+}
+.nav i 
+{
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    color: white;
+    border: 2px solid white;
+    font-size: 2.2vw;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+.title
+{
+    position: absolute;
+    top: 7.5%;
+    left: 15%;
+    font-size: 0.9vw;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+@media(max-width: 600px)
+{
+    .page1_text h1 {
+        font-size: 35px;
+    }
+    .page1_text {
+        bottom: 1%;
+    }
+    .nav i {
+        font-size: 6.2vw;
+    }
+    .title {
+        top: 8%;
+        left: 24%;
+        font-size: 3.9vw;
+    }
+    .mid img {
+        height: 250px;
+        width: 180px;
+    }
+    .verticle_text {
+        top: 26%;
+        left: 44%;
+        font-size: 24px;
+        white-space: nowrap;
+        overflow: initial;
+    }
+    .mid img {
+        top: 58%;
+        right: -6%;
+    }
+}
+
+@media(min-width: 601px) and (max-width: 991px)
+{
+    .nav i {
+        font-size: 4.2vw;
+    }
+    .title {
+        top: 8%;
+        left: 17%;
+        font-size: 2.9vw;
+    }
+    .page1_text {
+        bottom: 3%;
+    }
+    .page1_text h1 {
+        font-size: 45px;
+    }
+    .verticle_text {
+        white-space: nowrap;
+        top: 39%;
+        left: 44%;
+        font-size: 38px;
+        overflow: initial;
+    }
+    .mid img {
+        height: 300px;
+        width: 240px;
+        object-fit: cover;
+        top: 48%;
+        right: -10%;
+    }
+    
+}
+
+@media(min-width: 992px) and (max-width: 1420px)
+{
+    .verticle_text {
+        top: 40%;
+        left: 44%;
+        font-size: 55px;
+        overflow: initial;
+        white-space: nowrap;
+    }
+    .mid img {
+        height: 350px;
+        width: 240px;
+        top: 41%;
+        right: -6%;
+    }
+    .page1_text {
+        bottom: 10%;
+    }
+    .title {
+        top: 8%;
+        font-size: 1.9vw;
+    }
+}
